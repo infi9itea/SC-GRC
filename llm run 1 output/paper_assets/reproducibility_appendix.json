@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-09-21T14:23:39.043883",
+  "python_version": "3.12.13",
+  "torch_version": "2.10.0+cu128",
+  "transformers_version": "5.17.0",
+  "cuda_available": true,
+  "gpu_name": "Tesla T4",
+  "seeds": "unknown (see compute_budget note)",
+  "hyperparameters": {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "num_epochs": "unknown",
+    "batch_size": "unknown",
+    "grad_accum": "unknown",
+    "learning_rate": "unknown",
+    "lora_r": "unknown",
+    "lora_alpha": "unknown",
+    "max_seq_len": 512,
+    "hyperparameter_search": "none conducted \u2014 single configuration chosen from common QLoRA defaults in prior literature (Dettmers et al. 2023); state this explicitly rather than implying a search was run."
+  },
+  "compute_budget": {
+    "n_gpus": 1,
+    "gpu_type": "Tesla T4",
+    "n_training_runs": "unknown",
+    "total_train_wall_seconds": "unknown",
+    "total_gpu_hours": "unknown",
+    "trainable_parameters": 40370176,
+    "total_parameters": 4393342464,
+    "trainable_parameter_pct": 0.9189,
+    "estimated_energy_kwh": "unknown",
+    "estimated_co2_g": "unknown",
+    "note": "Energy/CO2 are TDP-based estimates (T4 @ 70W, global-average grid intensity), not measured with a power meter or CodeCarbon \u2014 state this caveat if reporting them. Fields marked \"unknown\" were computed in Notebook A's training session, which this run resumed from a saved checkpoint rather than re-running, so that telemetry was never captured. Recover them from Notebook A's own execution log/trainer_state.json if you need exact figures for the paper."
+  },
+  "data": {
+    "total_pairs": "unknown",
+    "train_size": "unknown",
+    "val_size": "unknown",
+    "test_size": "unknown",
+    "test_eval_subset_size": 333,
+    "leaked_test_examples_removed": "unknown",
+    "leakage_similarity_threshold": "unknown"
+  },
+  "rag": {
+    "kb_chunks": 9811,
+    "weak_retrieval_labels": 9,
+    "weak_label_threshold": 60
+  },
+  "evaluation_frameworks_used": [
+    "ROUGE-1/2/L (Lin, 2004)",
+    "chrF++ (Popovic, 2015/2017) \u2014 via sacrebleu",
+    "BERTScore F1, multilingual (Zhang et al., 2020)",
+    "RAGAS-lite: local reimplementation of Faithfulness/Answer-Relevancy/Context-Precision/Context-Recall (orig. framework: Es et al., 2024)",
+    "Bootstrap 95% CI + paired bootstrap significance test + Wilcoxon signed-rank",
+    "Krippendorff's alpha for human-annotator agreement",
+    "Optional LLM-as-judge pairwise comparison, position-bias-controlled (Zheng et al., 2023)",
+    "Local 0-4 rubric LLM-judge (Qwen2.5-7B-Instruct, adapter disabled): Strict (=4) / Acceptable (>=3) / Partial (>=2) accuracy with bootstrap CIs",
+    "LaBSE cross-lingual semantic cosine (Feng et al., 2022) vs English ground truth",
+    "Script/format compliance, cross-language consistency on matched EN/BN/Banglish triplets",
+    "Judge-vs-human validation: quadratic-weighted Cohen kappa, Spearman rho, Acceptable-agreement P/R/F1"
+  ]
+}

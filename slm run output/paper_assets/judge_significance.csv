@@ -1,0 +1,5 @@
+comparison,metric,n_pairs,mean_A,mean_B,delta,p_bootstrap,p_wilcoxon,significant_at_0.05
+Base (zero-shot)  →  Fine-tuned (FT),Mean judge score (0-4),333,2.1532,2.6787,0.5255,0.0,0.0,True
+Base (zero-shot)  →  Fine-tuned (FT),Acceptable accuracy,333,0.3904,0.5616,0.1712,0.0,0.0,True
+Fine-tuned (FT)  →  FT + RAG,Mean judge score (0-4),333,2.6787,2.3273,-0.3514,0.0,0.0002,True
+Fine-tuned (FT)  →  FT + RAG,Acceptable accuracy,333,0.5616,0.4444,-0.1171,0.0,0.0002,True

@@ -1,0 +1,4 @@
+System,N_triplets,All_3_Acceptable_%,All_3_Strict_%,Mean_Min_Language_Score,Mean_Cross_Language_SD,Gap_EN_minus_BN,Gap_EN_minus_Banglish
+Base (zero-shot),111,1.8,0.0,1.441,0.662,-0.514,-0.856
+Fine-tuned (FT),111,1.8,0.0,1.135,0.839,1.036,0.622
+FT + RAG,111,3.6,0.0,1.018,0.842,0.847,0.631

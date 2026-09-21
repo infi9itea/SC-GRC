@@ -1,0 +1,4 @@
+language,n_sampled,avg_tokens_per_word,std_tokens_per_word
+bangla,300,6.59,1.36
+banglish,300,1.99,0.41
+english,300,1.64,0.63

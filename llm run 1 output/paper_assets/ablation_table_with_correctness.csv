@@ -1,0 +1,5 @@
+System,ROUGE-L,chrF++,BERTScore_F1,EWU_Domain_Hit_%,Faithfulness,Avg_Latency_s,Strict_Acc_pct,Acceptable_Acc_pct,Mean_Judge_Score,Mean_Semantic_Cosine,Script_Format_OK_pct
+Base (zero-shot),0.0089,0.0132,0.6015,47.15,,,0.6,29.13,2.069,0.4468,33.63
+Fine-tuned (FT),0.0654,0.0958,0.6354,62.76,,,0.3,30.33,1.916,0.3975,100.0
+FT + RAG,0.0648,0.0924,0.6305,63.66,0.0631,9.614,0.0,25.83,1.787,0.3865,100.0
+FT + RAG + Cache (warm),0.0648,0.0924,0.6305,63.66,0.0631,0.021,0.0,25.83,1.787,0.3865,100.0

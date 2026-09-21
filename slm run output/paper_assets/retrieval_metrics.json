@@ -1,0 +1,16 @@
+{
+  "n_weak_labels": 9,
+  "n_total": 333,
+  "weak_label_threshold": 60,
+  "metrics": {
+    "Recall@1": 0.0,
+    "nDCG@1": 0.0,
+    "Recall@3": 0.0,
+    "nDCG@3": 0.0,
+    "Recall@5": 0.3333,
+    "nDCG@5": 0.1338,
+    "Recall@10": 0.3333,
+    "nDCG@10": 0.1338,
+    "MRR": 0.0722
+  }
+}

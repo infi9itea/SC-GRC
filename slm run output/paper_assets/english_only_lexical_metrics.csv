@@ -1,0 +1,4 @@
+System,N_english,ROUGE-L,chrF++,Token_F1,Exact_Match_%
+Base (zero-shot),111,0.1041,0.2222,0.1772,0.0
+Fine-tuned (FT),111,0.1149,0.2657,0.1865,0.0
+FT + RAG,111,0.1144,0.2639,0.1855,0.0

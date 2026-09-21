@@ -1,0 +1,7 @@
+{
+  "train_size": 8703,
+  "val_size": 1087,
+  "test_size": 890,
+  "leaked_removed": 197,
+  "leakage_threshold": 90
+}

@@ -1,0 +1,101 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "trained_at": "2026-09-21T09:34:07.431138",
+  "epochs": 10,
+  "train_samples": 8703,
+  "val_samples": 1087,
+  "test_samples_total": 890,
+  "test_samples_evaluated": 333,
+  "baseline_metrics": {
+    "ROUGE-1": 0.0115,
+    "ROUGE-2": 0.0009,
+    "ROUGE-L": 0.0089,
+    "BERTScore_F1": 0.6015,
+    "chrF++": 0.0132,
+    "Exact_Match_pct": 0.0,
+    "Avg_Gen_Length_w": 30.29,
+    "EWU_Domain_Hit_pct": 47.15
+  },
+  "finetuned_metrics": {
+    "ROUGE-1": 0.0888,
+    "ROUGE-2": 0.0171,
+    "ROUGE-L": 0.0654,
+    "BERTScore_F1": 0.6354,
+    "chrF++": 0.0958,
+    "Exact_Match_pct": 0.0,
+    "Avg_Gen_Length_w": 21.08,
+    "EWU_Domain_Hit_pct": 62.76
+  },
+  "finetuned_metrics_by_language": {
+    "bangla": {
+      "n": 111,
+      "ROUGE-1": 0.0009,
+      "ROUGE-L": 0.0009,
+      "BERTScore_F1": 0.6121,
+      "chrF++": 0.0023,
+      "EWU_Domain_Hit_pct": 33.33
+    },
+    "banglish": {
+      "n": 111,
+      "ROUGE-1": 0.0779,
+      "ROUGE-L": 0.064,
+      "BERTScore_F1": 0.6171,
+      "chrF++": 0.1202,
+      "EWU_Domain_Hit_pct": 76.58
+    },
+    "english": {
+      "n": 111,
+      "ROUGE-1": 0.1876,
+      "ROUGE-L": 0.1313,
+      "BERTScore_F1": 0.6769,
+      "chrF++": 0.1649,
+      "EWU_Domain_Hit_pct": 78.38
+    }
+  },
+  "significance_baseline_vs_finetuned": [
+    {
+      "metric": "ROUGE-1",
+      "baseline_mean": 0.0115,
+      "baseline_95ci": "[0.0085, 0.0149]",
+      "finetuned_mean": 0.0888,
+      "finetuned_95ci": "[0.0798, 0.0984]",
+      "delta": 0.0772,
+      "p_bootstrap": 0.0,
+      "p_wilcoxon": 0.0,
+      "significant_at_0.05": true
+    },
+    {
+      "metric": "ROUGE-L",
+      "baseline_mean": 0.0089,
+      "baseline_95ci": "[0.0066, 0.0113]",
+      "finetuned_mean": 0.0654,
+      "finetuned_95ci": "[0.0592, 0.0722]",
+      "delta": 0.0565,
+      "p_bootstrap": 0.0,
+      "p_wilcoxon": 0.0,
+      "significant_at_0.05": true
+    },
+    {
+      "metric": "chrF++",
+      "baseline_mean": 0.0132,
+      "baseline_95ci": "[0.0102, 0.0165]",
+      "finetuned_mean": 0.0958,
+      "finetuned_95ci": "[0.0873, 0.1045]",
+      "delta": 0.0826,
+      "p_bootstrap": 0.0,
+      "p_wilcoxon": 0.0,
+      "significant_at_0.05": true
+    },
+    {
+      "metric": "BERTScore F1",
+      "baseline_mean": 0.6015,
+      "baseline_95ci": "[0.5999, 0.6031]",
+      "finetuned_mean": 0.6354,
+      "finetuned_95ci": "[0.6312, 0.6400]",
+      "delta": 0.0339,
+      "p_bootstrap": 0.0,
+      "p_wilcoxon": 0.0,
+      "significant_at_0.05": true
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-09-21T15:45:11.778696",
+  "python_version": "3.12.13",
+  "torch_version": "2.3.1+cu121",
+  "transformers_version": "4.46.3",
+  "cuda_available": true,
+  "gpu_name": "Tesla T4",
+  "seeds": [
+    42
+  ],
+  "hyperparameters": {
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "num_epochs": 10,
+    "batch_size": 2,
+    "grad_accum": 8,
+    "learning_rate": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "hyperparameter_search": "none conducted \u2014 single configuration chosen from common QLoRA defaults in prior literature (Dettmers et al. 2023); state this explicitly rather than implying a search was run."
+  },
+  "compute_budget": {
+    "n_gpus": 1,
+    "gpu_type": "Tesla T4",
+    "n_training_runs": 1,
+    "total_train_wall_seconds": 0.0,
+    "total_gpu_hours": 0.0,
+    "trainable_parameters": 29933568,
+    "total_parameters": 1728606208,
+    "trainable_parameter_pct": 1.7317,
+    "estimated_energy_kwh": 0.0,
+    "estimated_co2_g": 0.0,
+    "note": "Energy/CO2 are TDP-based estimates (T4 @ 70W, global-average grid intensity), not measured with a power meter or CodeCarbon \u2014 state this caveat if reporting them."
+  },
+  "data": {
+    "total_pairs": 10877,
+    "train_size": 8703,
+    "val_size": 1087,
+    "test_size": 890,
+    "test_eval_subset_size": 333,
+    "leaked_test_examples_removed": 197,
+    "leakage_similarity_threshold": 90
+  },
+  "rag": {
+    "kb_chunks": 9811,
+    "weak_retrieval_labels": 9,
+    "weak_label_threshold": 60
+  },
+  "evaluation_frameworks_used": [
+    "ROUGE-1/2/L (Lin, 2004)",
+    "chrF++ (Popovic, 2015/2017) \u2014 via sacrebleu",
+    "BERTScore F1, multilingual (Zhang et al., 2020)",
+    "RAGAS-lite: local reimplementation of Faithfulness/Answer-Relevancy/Context-Precision/Context-Recall (orig. framework: Es et al., 2024)",
+    "Bootstrap 95% CI + paired bootstrap significance test + Wilcoxon signed-rank",
+    "Krippendorff's alpha for human-annotator agreement",
+    "Optional LLM-as-judge pairwise comparison, position-bias-controlled (Zheng et al., 2023)",
+    "Local 0-4 rubric LLM-judge (Qwen2.5-3B-Instruct, adapter disabled): Strict (=4) / Acceptable (>=3) / Partial (>=2) accuracy with bootstrap CIs",
+    "LaBSE cross-lingual semantic cosine (Feng et al., 2022) vs English ground truth",
+    "Script/format compliance, cross-language consistency on matched EN/BN/Banglish triplets",
+    "Judge-vs-human validation: quadratic-weighted Cohen kappa, Spearman rho, Acceptable-agreement P/R/F1"
+  ]
+}
