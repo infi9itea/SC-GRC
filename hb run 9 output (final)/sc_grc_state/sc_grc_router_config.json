@@ -1,0 +1,17 @@
+{
+  "n_samples": 333,
+  "original_bertscore_floor": 0.85,
+  "chosen_bertscore_threshold": 0.6627,
+  "threshold_source": "data_supported_fallback_below_0.85",
+  "min_class_fraction": 0.1,
+  "class_0_count": 34,
+  "class_1_count": 299,
+  "train_accuracy": 0.6030150753768844,
+  "heldout_accuracy": 0.582089552238806,
+  "k_samples": 3,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "top_k_dense": 10,
+  "top_k_sparse": 10,
+  "top_k_final": 4
+}
