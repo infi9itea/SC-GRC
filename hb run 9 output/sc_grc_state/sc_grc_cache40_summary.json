@@ -1,0 +1,10 @@
+{
+  "N_queries": 40,
+  "threshold": 0.92,
+  "cold_avg_latency_sec": 45.90714327096939,
+  "warm_avg_latency_sec": 0.02014458179473877,
+  "speedup_pct": 99.95611885131724,
+  "exact_hits": 40,
+  "semantic_hits": 0,
+  "misses": 40
+}
